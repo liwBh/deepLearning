@@ -5,13 +5,12 @@
 
     <h1 class="p-2 text-center text-secondary">Deep Learning</h1>
 
-
-
     <div class="row">
-        {# formulario de carga de imagen #}
+
         <div class="col-md-6 col-12">
             <h5 class="mt-5">Clasificador de Imagenes numericas</h5>
 
+            {#Todo formulario de carga de imagen #}
             <form method="POST" class="mt-3" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="mb-3 mt-3">
@@ -28,33 +27,22 @@
                 </div>
 
             </form>
+
+            {#Todo vista previa de la image subida #}
+            {% if uploaded_image %}
+                <div class="py-3 d-flex justify-content-center">
+                    <img src="data:image/png;base64,{{ uploaded_image }}" alt="Imagen subida"
+                         style="max-width: 150px; height: auto;" class="img-fluid">
+                </div>
+            {% endif %}
         </div>
 
-        {# Resultados luego de analizar al imagen#}
+        {#Todo Resultados luego de analizar al imagen #}
         <div class="col-md-6 col-12">
             {% if prediction %}
                 <h6 class="mt-5 text-primary text-center">Resultado: {{ prediction }}</h6>
-
-                {# si ya realizo una predicción #}
-                {% if prediction_obj %}
-                    <h6 class="mt-3 text-center">¿El número es incorrecto? Corrígelo aquí:</h6>
-                    <form method="POST" class="mt-3">
-                        {% csrf_token %}
-                        <input type="hidden" name="prediction_id" value="{{ prediction_obj.id }}">
-                        {{ form_correction.as_p }}
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-warning mt-3 px-5" name="correct_prediction">Corregir
-                                Predicción
-                            </button>
-                        </div>
-                    </form>
-                {% endif %}
-
             {% endif %}
         </div>
     </div>
-
-
-
 
 {% endblock %}
