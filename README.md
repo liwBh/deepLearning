@@ -251,5 +251,5 @@ Lo que se busca es mejorar el rendimiento al dividirlo se optinen valores de 0 a
 
 **save():** Guarda el modelo entrenado en un archivo con formato .h5. Este archivo contiene los pesos entrenados del modelo, así como la arquitectura. Esto te permite cargar el modelo más tarde sin tener que volver a entrenarlo.
 
-#### Patron de entrenmiento
+#### Patrón de entrenamiento
 ![img.png](src/classifier/static/classifier/img/img.png)
