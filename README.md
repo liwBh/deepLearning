@@ -66,6 +66,22 @@ permiten al modelo procesar y aprender de los datos. Las redes pueden ser simple
 (con una sola capa) o complejas (con múltiples capas), como las redes profundas 
 (Deep Neural Networks) usadas en Deep Learning.
 
+### Arquitecturas de redes neuronales
+- Perceptrón Multicapa (MLP)
+La arquitectura más básica, consiste en capas totalmente conectadas (capas densas) entre una capa de entrada y una capa de salida, con una o varias capas ocultas en el medio.
+Son usadas para problemas de clasificación y regresión. Es efectivo en datos estructurados o problemas donde la relación entre las variables no es espacial o secuencial.
+
+- Redes Neuronales Convolucionales (CNN)
+Utiliza capas que aplican filtros para detectar patrones locales en los datos (por ejemplo, bordes, texturas). Las CNN pueden capturar relaciones espaciales en los datos, como en imágenes.
+Son usadas para visión por computadora (clasificación de imágenes, detección de objetos, segmentación de imágenes). También en aplicaciones de procesamiento de audio.
+
+- Redes Neuronales Recurrentes (RNN)
+Son usadas para procesar datos secuenciales, donde el orden de los datos es importante. Tienen conexiones recurrentes que permiten que la salida de una capa alimente la siguiente, lo cual es útil para capturar dependencias temporales. Son usadas para el procesamiento de lenguaje natural (NLP), traducción automática, reconocimiento de voz,
+
+- Transformers
+En lugar de procesar secuencialmente, los Transformers aplican atención a todos los elementos de la secuencia a la vez.
+Son usadas para el procesamiento de lenguaje natural, incluyendo traducción, resumen de texto y chatbots avanzados como GPT (Generative Pre-trained Transformers).
+
 ## Descripción del proyecto
 
 En este ejemplo práctico, desarrollamos un sistema capaz de **predecir** un número 
