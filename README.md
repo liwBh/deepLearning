@@ -269,3 +269,72 @@ Lo que se busca es mejorar el rendimiento al dividirlo se optinen valores de 0 a
 
 #### Patrón de entrenamiento
 ![img.png](src/classifier/static/classifier/img/img.png)
+
+
+
+#### Comandos basicos de django
+
+1. Crear entorno virtual
+```  
+  python -m venv ./venv
+```
+   
+2.  Activar el entorno virtual
+windows
+```
+    .\venv\Scripts\activate
+```
+Linux
+```
+    source ./venv/bin/activate
+```
+
+3. Crear un proyecto 
+```   
+    django-admin startproject <my_project>
+```  
+   
+4. Crear una aplicación 
+```   
+    django-admin startapp <my_app>
+```  
+   
+5. Compilar el proyecto 
+```   
+    python manage.py runserver
+``` 
+   
+6. Generar archivo requirements.txt, si no lo tenemos o queremos actualizarlo
+```   
+  pip freeze > requirements.txt
+```  
+   
+7. Install requirements 
+```   
+  pip install -r requirements.txt
+```
+
+8. Crear migraciones 
+```   
+  python manage.py migrate
+```
+
+9. Crear super usuario
+```   
+    python manage.py createsuperuser
+```
+   
+10. Crear archivos estaticos
+```
+   python manage.py collectstatic
+```  
+
+11. Instalar django
+Instalar la última versión disponible
+```
+   pip install django
+```  
+Instalar una versión específica de Django
+```
+   pip install django=x.x.x
+```  
