@@ -1,4 +1,5 @@
 import tensorflow as tf
+import os
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Dropout
@@ -32,4 +33,5 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f'\nPrecisión en el conjunto de prueba: {test_acc}')
 
 # Guardar el modelo entrenado en la carpeta definida
-model.save('/home/liwbh/Documentos/ProyectosU/deepLearning/src/classifier/model/mnist_model.h5')
+FILE_PATH = os.path.join(os.path.dirname(__file__), 'classifier/model/mnist_model.h5')
+model.save(FILE_PATH)
